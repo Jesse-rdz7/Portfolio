@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Hotjar Tracking Code for billyrdz.com -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 2552024, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+  <style>
+    .hero-section {
+      background-color: #f8f9fa;
+    }
+
+    .navbar-custom {
+      background-color: #fff;
+    }
+
+    .title-main {
+      color: #0a9dda;
+    }
+
+    .title-sub {
+      color: #032d60;
+    }
+
+    .text-custom {
+      color: #181818;
+    }
+
+    .btn-portfolio {
+      background-color: #0176d3;
+      border-color: #0176d3;
+      color: #fff;
+      padding: 12px 32px;
+    }
+
+    .btn-about {
+      background-color: #fff;
+      border-color: #0176d3;
+      color: #0176d3;
+      padding: 12px 32px;
+      border-width: 2px;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .nav-link {
+      color: #032d60;
+      font-weight: 600;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+      color: #fff;
+      background-color: #0176d3;
+    }
+
+    .img-fluid {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .skills-img {
+      max-height: 100px;
+      max-width: 100px;
+    }
+
+    h3 {
+      color: #032d60;
+      font-weight: 600;
+      padding-top: 10px;
+    }
+
+    .bg-pastel-orange {
+      background-color: #ffd1c1;
+    }
+
+    .bg-pastel-blue {
+      background-color: #c1daff;
+    }
+
+    .bg-pastel-purple {
+      background-color: #e1c1ff;
+    }
+
+    .card {
+      transition: transform .3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .portfolio-item {
+      transition: transform 0.5s, opacity 0.5s;
+      opacity: 0;
+      transform: scale(0.95);
+      height: 0;
+      /* Hide the item initially */
+      overflow: hidden;
+      margin-bottom: 0;
+      /* Remove the margin to collapse the space */
+    }
+
+    .show {
+      opacity: 1;
+      transform: scale(1);
+      height: auto;
+      /* Set the height to auto to show the item */
+      margin-bottom: 24px;
+      /* Adjust the margin as needed */
+    }
+
+    /* CSS to visually hide but not remove the layout flow */
+    .hidden-item {
+      visibility: hidden;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .social-icons i {
+      font-size: 30px;
+    }
+
+    .company-logo {
+      max-height: 100px;
+      max-width: 100px;
+      filter: grayscale(100%);
+      object-fit: contain;
+    }
+
+    .trusted-companies h2 {
+      color: #606060;
+    }
+  </style>
+  <title>Jesus Rodriguez</title>
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-expand-sm navbar-light" style="background-color: #fff;">
+    <div class="container">
+      <!-- <div class="d-flex">
+        <a class="navbar-brand" href="#"><img src="https://abhimanyud3dx.github.io/superqbit-static-resources/resources/images/cert/Marketing.Cloud.Developer.png" alt="Salesforce Certified Marketing Cloud Developer" width="109" height="107"></a>
+        <a class="navbar-brand" href="#"><img src="https://abhimanyud3dx.github.io/superqbit-static-resources/resources/images/cert/Marketing.Cloud.Email.Specialist.png" alt="Salesforce Certified Marketing Cloud Email Specialist" width="109" height="107"></a>
+      </div> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-5 mt-5">
+          <h1 class="display-5 fw-bold title-main">Jesus Rodriguez</h1>
+          <p class="display-1 fw-bold title-sub">Email Developer</p>
+          <p class="fs-5 text-custom mb-0">I specialize in creating visually appealing and responsive emails that boost customer engagement and offer effective solutions.</p>
+          <a href="#portfolio" class="btn btn-lg btn-portfolio me-2 my-3">My Portfolio</a>
+          <a href="#about" class="btn btn-lg btn-about my-3">About Me</a>
+        </div>
+        <div class="col-md-5 my-5">
+          <img src="https://i.ibb.co/6nm3QSQ/1000014268.jpg" alt="Profile Image" class="img-fluid mx-auto d-block">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Proven Email Development-->
+
+
+
+
+
+
+
+
+
+  <!--Proven Email Development-->
+  <section class="text-center my-5" id="skills">
+    <h2 class="mb-5 display-4 fw-bold title-sub">My Skills</h2>
+    <div class="container">
+      <div class="row my-5">
+        <!-- Add one .col- for each image -->
+        <div class="col mt-auto"><img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML5" class="img-fluid skills-img">
+          <h3>HTML</h3>
+        </div>
+        <div class="col mt-auto"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="CSS3" class="img-fluid skills-img">
+          <h3>CSS</h3>
+        </div>
+        <div class="col mt-auto"><img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png" alt="JavaScript" class="img-fluid skills-img">
+          <h3>JavaScript</h3>
+        </div>
+      </div>
+      <div class="row my-5">
+        <div class="col mt-auto"><img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Ampscript" class="img-fluid skills-img">
+          <h3>Bootstrap</h3>
+        </div>
+        <div class="col mt-auto"><img src="https://mjml.io/assets/img/logo-small.png" alt="Salesforce" class="img-fluid skills-img">
+          <h3>Framework</h3>
+        </div>
+        <!-- <div class="col mt-auto"><img src="https://cdn.freebiesupply.com/logos/large/2x/litmus-logo-png-transparent.png" alt="Litmus" class="img-fluid skills-img">
+          <h3>Litmus</h3>
+        </div>
+      </div>
+      <div class="row my-5">
+        <div class="col mt-auto"><img src="https://www.pngall.com/wp-content/uploads/13/Figma-Logo.png" alt="Figma" class="img-fluid skills-img">
+          <h3>Figma</h3>
+        </div>
+        <div class="col mt-auto"><img src="https://iconape.com/wp-content/files/wy/346550/png/346550.png" alt="Eloqua" class="img-fluid skills-img">
+          <h3>Eloqua</h3>
+        </div>
+        <div class="col mt-auto"><img src="https://shreyhsoftsolutions.com/wp-content/uploads/2023/12/liquid-logo-text.png" alt="Liquid" class="img-fluid skills-img">
+          <h3>Liquid</h3>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about-me mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <img src="https://pc-tablet.co.in/wp-content/uploads/2024/02/laptop.jpg" alt="About Me" class="img-fluid">
+        </div>
+        <div class="col-md-5 text-custom">
+          <h4 class="display-5 fw-bold title-sub my-3">Get to know me</h4>
+          <p class="fs-5">Hi there! I'm Jesus Rodriguez—an Email Developer with a flair for crafting engaging, responsive email campaigns that drive meaningful engagement. With expertise in HTML, CSS, JavaScript, my mission is to turn marketing challenges into opportunities for connection and conversion. Beyond the code, I'm passionate about family, soccer, and helping others where I find inspiration and balance.</p>
+          <p class="fs-5 mb-0"> Driven by innovation and a commitment to excellence, I'm on an everlasting journey to elevate email marketing strategies. Let's connect and make your next campaign one to remember.</p>
+          <div class="social-icons my-3 d-flex">
+            <a href="https://www.linkedin.com/in/jesse-rdz-/" target="_blank"><i class="fab fa-linkedin text-custom fa-2x mx-3"></i></a>
+            <a href="https://github.com/Jesse-rdz7" target="_blank"><i class="fab fa-github text-custom fa-2x mx-3"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" class="portfolio-section my-5">
+    <div class="container text-center">
+      <h2 class="mb-5 display-4 fw-bold title-sub">My Projects</h2>
+      <ul class="nav nav-pills justify-content-center mb-4">
+        <li class="nav-item"><a class="nav-link active" href="#" data-portfolio-filter="all">All</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-portfolio-filter="emails">Emails</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-portfolio-filter="websites">Websites</a>
+        </li>
+      </ul>
+      <div class="row d-flex flex-wrap flex-row">
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="emails">
+          <a href=" https://jesse-rdz7.github.io/HBO-Max-Email/" target="_blank" rel="noopener noreferrer" class="card bg-pastel-orange">
+            <img src="https://github.com/BillyRdz/Toyota-HTML-Email/blob/main/Screenshot.png?raw=true" class="card-img-top" alt="Toyota"></a>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="emails">
+          <a href="https://jesse-rdz7.github.io/Toyota-webpage/" target="_blank" rel="noopener noreferrer" class="card bg-pastel-blue">
+            <img src="" class="card-img-top" alt="Toyota"></a> 
+        </div> 
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="websites">
+          <a href=" https://jesse-rdz7.github.io/LIncoln-Financial-webpage/" target="_blank" rel="noopener noreferrer" class="card bg-pastel-purple">
+            <img src="https://github.com/Jesse-rdz7/LIncoln-Financial-webpage/blob/main/Lincoln%20Financial%20image.png?raw=true" class="card-img-top" alt="Lincoln Financial Group"></a>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="websites">
+          <a href="https://simple-desk.netlify.app/" target="_blank" rel="noopener noreferrer" class="card bg-pastel-orange">
+            <img src="https://github.com/BillyRdz/Simple-Desk/blob/main/Screenshot.png?raw=true" class="card-img-top" alt="Simple Desk"></a>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="websites">
+          <a href=" https://jesse-rdz7.github.io/Nike-transactional/" target="_blank" rel="noopener noreferrer" class="card bg-pastel-blue">
+            <img src="https://github.com/Jesse-rdz7/Nike-transactional/blob/main/Nike%20transactional%20image.png?raw=true" class="card-img-top" alt="Mortgify"></a>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="emails">
+          <a href="https://angellist-newsletter.netlify.app/" target="_blank" rel="noopener noreferrer" class="card bg-pastel-purple">
+            <img src="https://github.com/BillyRdz/angellist-newsletter/blob/master/AngelList-Newsletter.png?raw=true" class="card-img-top" alt="AngelList"></a>
+        </div>
+        <!-- <div class="col-lg-4 mb-3 portfolio-item show" data-category="emails">
+          <a href="https://heb-transactional-email.netlify.app/" target="_blank" rel="noopener noreferrer" class="card bg-pastel-orange">
+            <img src="https://github.com/BillyRdz/heb-transactional-email/blob/master/HEB-Transactional.png?raw=true" class="card-img-top" alt="HEB Email"></a>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="websites">
+          <a href="https://billyrdz.github.io/Javascript-Social-Splash" target="_blank" rel="noopener noreferrer" class="card bg-pastel-blue">
+            <img src="https://github.com/BillyRdz/Javascript-Social-Splash/blob/main/Javascript-Splash.png?raw=true" class="card-img-top" alt="Javascript Website"></a>
+        </div>
+        <div class="col-lg-4 mb-3 portfolio-item show" data-category="emails">
+          <a href="https://marleylilly-promotional-email.netlify.app/" target="_blank" rel="noopener noreferrer" class="card bg-pastel-purple">
+            <img src="https://github.com/BillyRdz/marleylilly-promotional-email/blob/master/Marleylilly-Promo.png?raw=true" class="card-img-top" alt="Marleylilly Email"></a>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- Portfolio Filtering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var portfolioFilterLinks = document.querySelectorAll('[data-portfolio-filter]');
+      var portfolioItems = document.querySelectorAll('.portfolio-item');
+
+      portfolioFilterLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Get the filter category from the clicked link
+          var category = this.getAttribute('data-portfolio-filter');
+
+          // Remove 'active' class from all portfolio filter links and add to the clicked one
+          portfolioFilterLinks.forEach(function (nav) { nav.classList.remove('active'); });
+          this.classList.add('active');
+
+          // Filter portfolio items based on the selected category
+          portfolioItems.forEach(function (item) {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+              item.classList.remove('hidden-item');
+              item.classList.add('show');
+            } else {
+              item.classList.add('hidden-item');
+              item.classList.remove('show');
+            }
+          });
+        });
+      });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      var scrollElements = document.querySelectorAll('nav .navbar-nav .nav-link, a.btn.btn-lg.btn-portfolio.me-2.my-3,a.btn.btn-lg.btn-about.my-3');
+
+      scrollElements.forEach(function (element) {
+        element.addEventListener('click', function (e) {
+          var targetId = this.getAttribute('href');
+          if (targetId && targetId.startsWith("#")) {
+            var targetSection = document.querySelector(targetId);
+            if (targetSection) {
+              e.preventDefault(); // Prevent default anchor click behavior
+
+              // Dynamically calculate header's height
+              var header = document.querySelector('.navbar'); // Adjust this selector to your header
+              var headerHeight = header.offsetHeight;
+              var offsetPosition = targetSection.offsetTop - headerHeight;
+
+              // Smooth scroll to the section
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+              });
+
+              // Close the navbar in mobile view
+              var navbarToggler = document.querySelector('.navbar-toggler');
+              var navbarCollapse = document.querySelector('.navbar-collapse');
+              if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
+                // Check if toggler is visible (i.e., in mobile view)
+                var bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+                bsCollapse.hide(); // Use Bootstrap's method to hide
+              }
+            }
+          }
+        });
+      });
+    });
+  </script>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
